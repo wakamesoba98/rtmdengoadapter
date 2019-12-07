@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "rtmdengoadapter",
+    "name": "RTM Dengo Adapter",
+    "description": "Train controller adapter for RealTrainMod",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/wakamesoba98/rtmdengoadapter",
+    "updateUrl": "",
+    "authorList": ["wakamesoba98"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
