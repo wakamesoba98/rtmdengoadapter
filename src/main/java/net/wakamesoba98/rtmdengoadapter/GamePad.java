@@ -11,15 +11,27 @@ public class GamePad {
     private Controller control;
     private int lastNotchLevel, lastBrakeLevel;
     private int currentLevel = 0;
-    private TrainController trainController;
+    private GamePadAdapter gamePadAdapter;
 
     public GamePad() throws LWJGLException, NoSuchFieldException {
         Controllers.create();
-        if (Controllers.getControllerCount() > 0) {
-            control = Controllers.getController(0);
+        for (int i = 0; i < Controllers.getControllerCount(); i++) {
+            Controller controller = Controllers.getController(i);
+            String controllerName = controller.getName();
+            if (controllerName.equals("ELECOM JC-PS201U series")) {
+                control = controller;
+                gamePadAdapter = new DPadAsButtonGamePadAdapter();
+                break;
+            } else if (controllerName.equals("ELECOM JC-PS101U series")) {
+                control = controller;
+                gamePadAdapter = new DPadAsAxisGamePadAdapter();
+                break;
+            }
+        }
+        if (gamePadAdapter == null) {
+            return;
         }
         KeyboardBuffer.init();
-        trainController = new TwoHandlesTrainController();
     }
 
     @SubscribeEvent
@@ -28,17 +40,17 @@ public class GamePad {
     }
 
     private void tick() {
-        if (control == null) {
+        if (control == null || gamePadAdapter == null) {
             return;
         }
         control.poll();
 
-        int notchLevel = trainController.getNotch(control, lastNotchLevel);
+        int notchLevel = gamePadAdapter.getNotch(control, lastNotchLevel);
         if (lastNotchLevel != notchLevel) {
             lastNotchLevel = notchLevel;
         }
 
-        int brakeLevel = trainController.getBrake(control, lastBrakeLevel);
+        int brakeLevel = gamePadAdapter.getBrake(control, lastBrakeLevel);
         if (lastBrakeLevel != brakeLevel) {
             lastBrakeLevel = brakeLevel;
         }

@@ -20,8 +20,13 @@ MinecraftのRealTrainModにおける列車操作を電車でGO! ツーハンド�
 - Minecraft: 1.12.1
 - Forge: 1.12.2-14.23.2.2611
 - RealTrainMod: 2.4.12-31
-- USBゲームパッドコンバータ: JC-PS101USV
-- 電車でGO! ツーハンドルコントローラ SLPH-00051
+- USBゲームパッドコンバータ: 
+    - JC-PS201U
+      - ドライバより Remap メニューの Use Direction Buttons as: を `Button` に設定してください
+    - JC-PS101U
+- 電車でGO! 専用コントローラ
+  - ツーハンドルコントローラ SLPH-00051
+  - ワンハンドルコントローラ TCPP-20001
 
 上記以外の動作確認は行っておりません。対応機種を増やすPull Requestは歓迎します。
 
