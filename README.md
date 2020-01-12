@@ -2,7 +2,7 @@
 
 Train controller adapter for RealTrainMod.
 
-MinecraftのRealTrainModにおける列車操作を電車でGO! ツーハンドルコントローラで行うためのMODです。
+MinecraftのRealTrainModにおける列車操作を電車でGO! 専用コントローラで行うためのMODです。
 
 ## 注意事項
 
@@ -21,9 +21,9 @@ MinecraftのRealTrainModにおける列車操作を電車でGO! ツーハンド�
 - Forge: 1.12.2-14.23.2.2611
 - RealTrainMod: 2.4.12-31
 - USBゲームパッドコンバータ: 
-    - JC-PS201U
-      - ドライバより Remap メニューの Use Direction Buttons as: を `Button` に設定してください
-    - JC-PS101U
+  - JC-PS201U
+    - ドライバより Remap メニューの Use Direction Buttons as: を `Button` に設定してください
+  - JC-PS101U
 - 電車でGO! 専用コントローラ
   - ツーハンドルコントローラ SLPH-00051
   - ワンハンドルコントローラ TCPP-20001
@@ -32,7 +32,7 @@ MinecraftのRealTrainModにおける列車操作を電車でGO! ツーハンド�
 
 ## 使用方法
 
-- JC-PS101USVを使用して、電車でGO! ツーハンドルコントローラをコンピュータに接続します。
+- 対応するUSBゲームパッドコンバータを使用して、電車でGO! 専用コントローラをコンピュータに接続します。
 - Minecraftを起動します。
 - 列車乗車時に **必ず** 以下のキャリブレーションを行います。
   - マスコン・ブレーキを0に合わせる
