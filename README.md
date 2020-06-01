@@ -6,20 +6,23 @@ MinecraftのRealTrainModにおける列車操作を電車でGO! 専用コント�
 
 ## 注意事項
 
-当MODは無保証で提供されます。MODを使用した際に発生したあらゆる問題に対し私wakamesoba98は一切の責任を負いません。
+当MODはwakamesoba98氏開発のrtmdengoadapterを1.7.10で動作するようにしたものです。
+
+当MODは無保証で提供されます。MODを使用した際に発生したあらゆる問題に対し私Kaiz_JPは一切の責任を負いません。
 
 使用前にあらかじめMinecraftセーブデータのバックアップを保管してください。
 
 ## ビルド環境
 
 - IntelliJ IDEA
-- forge-1.12.2-14.23.2.2611-mdk
+- forge-1.7.10-10.13.4.1614-src
 
 ## 動作確認済み環境
 
-- Minecraft: 1.12.1
-- Forge: 1.12.2-14.23.2.2611
-- RealTrainMod: 2.4.12-31
+- Minecraft: 1.7.10
+- Forge: Forge-10.13.4.1614
+- RealTrainMod: 1.7.10.40
+- ATSAssist: 1.4.1beta_v3.0
 - USBゲームパッドコンバータ: 
   - JC-PS201U
     - ドライバより Remap メニューの Use Direction Buttons as: を `Button` に設定してください
@@ -34,12 +37,7 @@ MinecraftのRealTrainModにおける列車操作を電車でGO! 専用コント�
 
 - 対応するUSBゲームパッドコンバータを使用して、電車でGO! 専用コントローラをコンピュータに接続します。
 - Minecraftを起動します。
-- 列車乗車時に **必ず** 以下のキャリブレーションを行います。
-  - マスコン・ブレーキを0に合わせる
-  - マスコンを5に入れる
-  - マスコンを0に戻す
-  - ブレーキを非常に入れる
-  - ブレーキを0に戻す
+- 以上です
 
 ## ライセンス
 

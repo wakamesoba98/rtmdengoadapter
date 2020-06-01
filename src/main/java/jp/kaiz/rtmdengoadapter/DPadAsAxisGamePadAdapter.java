@@ -1,4 +1,4 @@
-package net.wakamesoba98.rtmdengoadapter;
+package jp.kaiz.rtmdengoadapter;
 
 import org.lwjgl.input.Controller;
 

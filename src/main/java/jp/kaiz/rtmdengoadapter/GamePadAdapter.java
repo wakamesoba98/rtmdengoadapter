@@ -1,4 +1,4 @@
-package net.wakamesoba98.rtmdengoadapter;
+package jp.kaiz.rtmdengoadapter;
 
 import org.lwjgl.input.Controller;
 
@@ -10,9 +10,9 @@ public abstract class GamePadAdapter {
     public int getBrake(Controller control, int lastBrakeLevel) {
         int brakeLevel;
         int brakeButton = booleanToInt(control.isButtonPressed(6))
-                + booleanToInt(control.isButtonPressed(4)) * 2
-                + booleanToInt(control.isButtonPressed(7)) * 4
-                + booleanToInt(control.isButtonPressed(5)) * 8;
+                + (booleanToInt(control.isButtonPressed(4)) * 2)
+                + (booleanToInt(control.isButtonPressed(7)) * 4)
+                + (booleanToInt(control.isButtonPressed(5)) * 8);
         switch (brakeButton) {
             case 15:
                 brakeLevel = lastBrakeLevel;
