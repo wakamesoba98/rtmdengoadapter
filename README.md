@@ -12,6 +12,18 @@ MinecraftのRealTrainModにおける列車操作を電車でGO! 専用コント�
 
 使用前にあらかじめMinecraftセーブデータのバックアップを保管してください。
 
+## LiteLoader併用時の注意
+
+liteconfig\liteloader.properties内の
+```
+disableJInput=false
+```
+を
+```
+disableJInput=true
+```
+に変更してください。
+
 ## ビルド環境
 
 - IntelliJ IDEA
