@@ -9,11 +9,15 @@
     "updateUrl": "",
     "authorList": [
       "wakamesoba98",
+      "masa300",
       "Kaiz_JP"
     ],
     "credits": "",
     "logoFile": "",
     "screenshots": [],
-    "dependencies": []
+    "dependencies": [
+      "NGTLib",
+      "atsassistmod"
+    ]
   }
 ]

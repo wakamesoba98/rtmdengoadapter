@@ -13,9 +13,8 @@ public class GamePad {
     private GamePadAdapter gamePadAdapter;
 
     public GamePad() throws LWJGLException {
-        if (!Controllers.isCreated()) {
-            Controllers.create();
-        }
+        Controllers.create();
+
         label:
         for (int i = 0; i < Controllers.getControllerCount(); i++) {
             Controller controller = Controllers.getController(i);
@@ -29,6 +28,10 @@ public class GamePad {
                 case "ELECOM JC-PS101U series":
                     control = controller;
                     gamePadAdapter = new DPadAsAxisGamePadAdapter();
+                    break label;
+                case "Generic   USB  Joystick  ":
+                    control = controller;
+                    gamePadAdapter = new SanYingGamePadAdpter();
                     break label;
             }
         }
@@ -55,7 +58,6 @@ public class GamePad {
             int level = (brakeLevel < 0) ? brakeLevel : notchLevel;
             if (currentLevel != level) {
                 currentLevel = level;
-                System.out.println("notch: " + currentLevel);
                 TrainNotchController.setNotch(level);
             }
         }

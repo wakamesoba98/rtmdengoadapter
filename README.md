@@ -23,6 +23,8 @@ MinecraftのRealTrainModにおける列車操作を電車でGO! 専用コント�
 - Forge: Forge-10.13.4.1614
 - RealTrainMod: 1.7.10.40
 - ATSAssist: 1.4.1beta_v3.0
+
+
 - USBゲームパッドコンバータ: 
   - JC-PS201U
     - ドライバより Remap メニューの Use Direction Buttons as: を `Button` に設定してください
@@ -30,6 +32,7 @@ MinecraftのRealTrainModにおける列車操作を電車でGO! 専用コント�
 - 電車でGO! 専用コントローラ
   - ツーハンドルコントローラ SLPH-00051
   - ワンハンドルコントローラ TCPP-20001
+- 三鶯重工 OHC-PC01
 
 上記以外の動作確認は行っておりません。対応機種を増やすPull Requestは歓迎します。
 
