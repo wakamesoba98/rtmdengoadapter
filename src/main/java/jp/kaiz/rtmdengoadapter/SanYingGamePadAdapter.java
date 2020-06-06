@@ -2,7 +2,22 @@ package jp.kaiz.rtmdengoadapter;
 
 import org.lwjgl.input.Controller;
 
-public class SanYingGamePadAdpter extends GamePadAdapter {
+public class SanYingGamePadAdapter extends GamePadAdapter {
+
+    @Override
+    public boolean isHorn(Controller control) {
+        return control.isButtonPressed(0);
+    }
+
+    @Override
+    public boolean isDoorR(Controller control) {
+        return control.isButtonPressed(1);
+    }
+
+    @Override
+    public boolean isDoorL(Controller control) {
+        return control.isButtonPressed(2);
+    }
 
     public int getNotch(Controller control, int lastNotchLevel) {
         int notchLevel;

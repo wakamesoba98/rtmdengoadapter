@@ -7,6 +7,18 @@ public abstract class GamePadAdapter {
         return b ? 1 : 0;
     }
 
+    public boolean isHorn(Controller control){
+        return false;
+    }
+
+    public boolean isDoorR(Controller control){
+        return false;
+    }
+
+    public boolean isDoorL(Controller control){
+        return false;
+    }
+
     public int getBrake(Controller control, int lastBrakeLevel) {
         int brakeLevel;
         int brakeButton = booleanToInt(control.isButtonPressed(6))

@@ -3,6 +3,22 @@ package jp.kaiz.rtmdengoadapter;
 import org.lwjgl.input.Controller;
 
 public class DPadAsButtonGamePadAdapter extends GamePadAdapter {
+
+    @Override
+    public boolean isHorn(Controller control) {
+        return false;
+    }
+
+    @Override
+    public boolean isDoorR(Controller control) {
+        return false;
+    }
+
+    @Override
+    public boolean isDoorL(Controller control) {
+        return false;
+    }
+
     public int getNotch(Controller control, int lastNotchLevel) {
         int notchLevel;
         int brakeButton = booleanToInt(control.isButtonPressed(0))

@@ -3,6 +3,22 @@ package jp.kaiz.rtmdengoadapter;
 import org.lwjgl.input.Controller;
 
 public class DPadAsAxisGamePadAdapter extends GamePadAdapter {
+
+    @Override
+    public boolean isHorn(Controller control) {
+        return control.isButtonPressed(3);
+    }
+
+    @Override
+    public boolean isDoorR(Controller control) {
+        return control.isButtonPressed(8);
+    }
+
+    @Override
+    public boolean isDoorL(Controller control) {
+        return control.isButtonPressed(9);
+    }
+
     public int getNotch(Controller control, int lastNotchLevel) {
         int notchLevel;
         int notchAxis = (int) control.getXAxisValue();
