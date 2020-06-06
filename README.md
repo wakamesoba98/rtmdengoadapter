@@ -1,4 +1,4 @@
-# RTM Dengo Adapter
+# RTM Dengo Adapter FOR 1.7.10
 
 Train controller adapter for RealTrainMod.
 
@@ -34,7 +34,7 @@ disableJInput=true
 - Minecraft: 1.7.10
 - Forge: Forge-10.13.4.1614
 - RealTrainMod: 1.7.10.40
-- ATSAssist: 1.4.1beta_v3.0
+- ATSAssist: 1.4.1beta_v3.2
 
 
 - USBゲームパッドコンバータ: 
