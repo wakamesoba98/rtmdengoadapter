@@ -34,7 +34,7 @@ disableJInput=true
 - Minecraft: 1.7.10
 - Forge: Forge-10.13.4.1614
 - RealTrainMod: 1.7.10.40
-- ATSAssist: 1.4.1beta_v3.2
+- ATSAssist: 1.4.1beta_v4.0
 
 
 - USBゲームパッドコンバータ: 
@@ -53,6 +53,14 @@ disableJInput=true
 - 対応するUSBゲームパッドコンバータを使用して、電車でGO! 専用コントローラをコンピュータに接続します。
 - Minecraftを起動します。
 - 以上です
+
+## 各ボタン機能対照表
+※JC-PS201Uはボタン情報が不明なため未実装
+| コンバーター/コントローラー | 警笛 | 右ドア | 左ドア |
+| -- | -- | -- | -- |
+| JC-PS101U | A | START | SELECT |
+| JC-PS201U | -- | -- | -- |
+| OHC-PC01 | 手前の黒ボタン | 白ボタン | 黄色ボタン |
 
 ## ライセンス
 
