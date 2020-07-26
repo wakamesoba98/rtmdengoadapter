@@ -36,6 +36,7 @@ disableJInput=true
 - RealTrainMod: 1.7.10.40
 - ATSAssist: 1.4.1beta_v4.0
 
+---
 
 - USBゲームパッドコンバータ: 
   - JC-PS201U
@@ -55,12 +56,37 @@ disableJInput=true
 - 以上です
 
 ## 各ボタン機能対照表
-※JC-PS201Uはボタン情報が不明なため未実装
+
 | コンバーター/コントローラー | 警笛 | 右ドア | 左ドア |
 | -- | -- | -- | -- |
 | JC-PS101U | A | START | SELECT |
-| JC-PS201U | -- | -- | -- |
+| JC-PS201U | A | START | SELECT |
 | OHC-PC01 | 手前の黒ボタン | 白ボタン | 黄色ボタン |
+
+## ビルド
+
+`lib` ディレクトリを作成し、
+
+- [RTM1.7.10.40_Forge10.13.4.1558.jar](https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/2940834)
+- [ATSAssistMod1.4.1b_v4.0.jar](https://github.com/Kai-Z-JP/ATSAssistMod/releases)
+
+を `lib` ディレクトリに入れてください。
+
+### Windows
+
+```shell
+.\gradlew.bat setupDecompWorkspace
+.\gradlew.bat idea genIntellijRuns
+.\gradlew.bat build
+```
+
+### Linux
+
+```shell
+./gradlew setupDecompWorkspace
+./gradlew idea genIntellijRuns
+./gradlew build
+```
 
 ## ライセンス
 

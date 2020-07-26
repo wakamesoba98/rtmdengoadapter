@@ -6,17 +6,17 @@ public class DPadAsButtonGamePadAdapter extends GamePadAdapter {
 
     @Override
     public boolean isHorn(Controller control) {
-        return false;
+        return control.isButtonPressed(3);
     }
 
     @Override
     public boolean isDoorR(Controller control) {
-        return false;
+        return control.isButtonPressed(8);
     }
 
     @Override
     public boolean isDoorL(Controller control) {
-        return false;
+        return control.isButtonPressed(9);
     }
 
     public int getNotch(Controller control, int lastNotchLevel) {

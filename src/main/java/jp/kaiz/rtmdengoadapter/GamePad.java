@@ -5,7 +5,6 @@ import cpw.mods.fml.common.gameevent.TickEvent;
 import jp.kaiz.atsassistmod.api.ControlTrain;
 import jp.ngt.rtm.RTMCore;
 import jp.ngt.rtm.entity.train.EntityTrainBase;
-import jp.ngt.rtm.entity.train.util.TrainState;
 import jp.ngt.rtm.event.RTMKeyHandlerClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
