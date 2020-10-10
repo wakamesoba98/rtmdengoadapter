@@ -30,6 +30,28 @@ MinecraftのRealTrainModにおける列車操作を電車でGO! 専用コント�
 
 上記以外の動作確認は行っておりません。対応機種を増やすPull Requestは歓迎します。
 
+## ビルド
+
+### Windows
+
+```shell
+.\gradlew.bat setupDecompWorkspace
+.\gradlew.bat idea genIntellijRuns
+.\gradlew.bat build
+```
+
+`build\libs\rtmdengoadapter-0.1.jar` が生成されます。
+
+### Linux
+
+```shell
+./gradlew setupDecompWorkspace
+./gradlew idea genIntellijRuns
+./gradlew build
+```
+
+`build/libs/rtmdengoadapter-0.1.jar` が生成されます。
+
 ## 使用方法
 
 - 対応するUSBゲームパッドコンバータを使用して、電車でGO! 専用コントローラをコンピュータに接続します。
