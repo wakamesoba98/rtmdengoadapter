@@ -1,19 +1,21 @@
 package net.wakamesoba98.rtmdengoadapter;
 
+import jp.ngt.rtm.entity.train.EntityTrainBase;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Controller;
 import org.lwjgl.input.Controllers;
-import org.lwjgl.input.Keyboard;
 
 public class GamePad {
     private Controller control;
     private int lastNotchLevel, lastBrakeLevel;
-    private int currentLevel = 0;
     private GamePadAdapter gamePadAdapter;
 
-    public GamePad() throws LWJGLException, NoSuchFieldException {
+    public GamePad() throws LWJGLException {
         Controllers.create();
         for (int i = 0; i < Controllers.getControllerCount(); i++) {
             Controller controller = Controllers.getController(i);
@@ -28,10 +30,6 @@ public class GamePad {
                 break;
             }
         }
-        if (gamePadAdapter == null) {
-            return;
-        }
-        KeyboardBuffer.init();
     }
 
     @SubscribeEvent
@@ -41,6 +39,10 @@ public class GamePad {
 
     private void tick() {
         if (control == null || gamePadAdapter == null) {
+            return;
+        }
+        EntityTrainBase train = this.getTrain();
+        if (train == null || !train.isControlCar()) {
             return;
         }
         control.poll();
@@ -56,15 +58,20 @@ public class GamePad {
         }
 
         int level = (brakeLevel < 0) ? brakeLevel : notchLevel;
-        if (currentLevel < level) {
-            currentLevel++;
-            KeyboardBuffer.press(Keyboard.KEY_S);
-        } else if (currentLevel > level) {
-            currentLevel--;
-            KeyboardBuffer.press(Keyboard.KEY_W);
-        } else {
-            KeyboardBuffer.release(Keyboard.KEY_S);
-            KeyboardBuffer.release(Keyboard.KEY_W);
+        int currentNotch = train.getNotch();
+        if (level != currentNotch) {
+            train.syncNotch(level - currentNotch);
         }
+    }
+
+    public EntityTrainBase getTrain() {
+        EntityPlayer player = Minecraft.getMinecraft().player;
+        if (player != null) {
+            Entity entity = player.getRidingEntity();
+            if (entity instanceof EntityTrainBase) {
+                return (EntityTrainBase) entity;
+            }
+        }
+        return null;
     }
 }
