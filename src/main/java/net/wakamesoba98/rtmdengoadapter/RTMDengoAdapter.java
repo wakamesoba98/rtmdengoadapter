@@ -28,8 +28,6 @@ public class RTMDengoAdapter {
             MinecraftForge.EVENT_BUS.register(new GamePad());
         } catch (LWJGLException e) {
             logger.log(Level.WARN, "Failed to initialize Controllers");
-        } catch (NoSuchFieldException e) {
-            logger.log(Level.WARN, "Failed to initialize KeyboardBuffer");
         }
     }
 }

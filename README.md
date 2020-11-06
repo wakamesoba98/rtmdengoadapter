@@ -19,7 +19,8 @@ MinecraftのRealTrainModにおける列車操作を電車でGO! 専用コント�
 
 - Minecraft: 1.12.1
 - Forge: 1.12.2-14.23.2.2611
-- RealTrainMod: 2.4.12-31
+- NGTLib: 2.4.18-35
+- RealTrainMod: 2.4.12-40
 - USBゲームパッドコンバータ: 
   - JC-PS201U
     - ドライバより Remap メニューの Use Direction Buttons as: を `Button` に設定してください
@@ -31,6 +32,13 @@ MinecraftのRealTrainModにおける列車操作を電車でGO! 専用コント�
 上記以外の動作確認は行っておりません。対応機種を増やすPull Requestは歓迎します。
 
 ## ビルド
+
+`lib` ディレクトリを作成し、
+
+- [NGTLib2.4.18-35_forge-1.12.2-14.23.2.2611.jar](https://www.curseforge.com/minecraft/mc-mods/ngtlib/files/3003745)
+- [RTM2.4.21-40_forge-1.12.2-14.23.2.2611.jar](https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/3061973)
+
+を `lib` ディレクトリに入れてください。
 
 ### Windows
 
@@ -56,12 +64,6 @@ MinecraftのRealTrainModにおける列車操作を電車でGO! 専用コント�
 
 - 対応するUSBゲームパッドコンバータを使用して、電車でGO! 専用コントローラをコンピュータに接続します。
 - Minecraftを起動します。
-- 列車乗車時に **必ず** 以下のキャリブレーションを行います。
-  - マスコン・ブレーキを0に合わせる
-  - マスコンを5に入れる
-  - マスコンを0に戻す
-  - ブレーキを非常に入れる
-  - ブレーキを0に戻す
 
 ## ライセンス
 
